@@ -1,0 +1,118 @@
+<html>
+<head>
+	<title>CSS Animation - VTEX Day 2015</title>
+<link rel="stylesheet" href="bootstrap.min.css">
+<link rel="stylesheet" href="main.css">
+
+<script src="jquery.min.js"></script>
+</head>
+<body>
+
+<header class="container-fluid">
+	<section class="container">
+		<h1 class="pull-left">Loja VTEX</h1>
+		<a href="#cart" class="open-cart pull-right">
+			Meu carrinho <i class="fa fa-shopping-cart"></i> 
+		</a>
+	</section>
+</header>
+
+<div class="container">
+
+	<section class="row">
+		<nav class="col-md-2">
+			<h3>Masculino</h3>
+			<ul>
+				<li>
+					<a href="#">Tênis</a>
+				</li>
+				<li>
+					<a href="#">Camiseta</a>
+				</li>
+				<li>
+					<a href="#">Camisas</a>
+				</li>
+				<li>
+					<a href="#">Casacos</a>
+				</li>
+				<li>
+					<a href="#">Meias</a>
+				</li>
+				<li>
+					<a href="#">Acessórios</a>
+				</li>
+			</ul>
+			<h3>Feminino</h3>
+			<ul>
+				<li>
+					<a href="#">Tênis</a>
+				</li>
+				<li>
+					<a href="#">Camiseta</a>
+				</li>
+				<li>
+					<a href="#">Camisas</a>
+				</li>
+				<li>
+					<a href="#">Casacos</a>
+				</li>
+				<li>
+					<a href="#">Meias</a>
+				</li>
+				<li>
+					<a href="#">Acessórios</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="col-md-10 details">
+			<div class="col-md-5">
+				<div class="img-ph"></div>
+			</div>
+			<div class="col-md-7">			
+				<h2>
+					Max Fillet Ao Molho Adultos
+				</h2>
+				<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+
+				<!-- BOTÃO COMPRAR COM ANIMATION E TRANSITION. 
+				TAMBÉM TROCA UMA CLASSE NA DIV mini-cart AO SER CLICADO --> 
+				<a href="#cart" class="btn btn-success btn-lg open-cart" id="buy"><i class="fa fa-cart-plus"></i> Comprar</a>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- ESSA SIDEBAR ABRE QUANDO CLICAMOS NO BOTÃO COMPRAR -->
+	<div class="mini-cart" id="cart">
+		<h3>Carrinho</h3>
+		<div class="row mini-cart-list">
+			<div class="col-md-4">
+				<div class="img-ph"></div>
+			</div>
+			<div class="col-md-8">Max Fillet Ao Molho Adultos<br>
+				<small>Vivamus sagittis lacus</small>
+			</div>
+		</div>
+
+		<footer>
+			<hr>
+			<a href="#" class="btn btn-default btn-block btn-back" id="back-cart"> &#10094; Escolher mais produtos</a>
+			<a href="#" class="btn btn-success btn-block btn-lg btn-finish">Finalizar compra &#10095;</a>
+		</footer>
+	</div>
+</div>
+<script>
+	// JQuery simples para aplicar ou remover a classe que faz a transição do minicart
+	$(document).ready(function() {
+		$('.open-cart').on('click', function() {
+			$('#cart').addClass('active');
+			event.preventDefault();
+		});
+		$('#back-cart').on('click', function() {
+			$('#cart').removeClass('active');
+			event.preventDefault();
+		});
+	});
+</script>
+</body>
+</html>

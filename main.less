@@ -1,0 +1,66 @@
+@import "base";
+
+/*=======================================
+=            Botão Comprar            =
+=======================================*/
+
+// Este bloco define a transição do hover no próximo bloco e chama a animação dos keyframes
+.details .btn {
+  transition: all .4s;
+  animation: pop 1s;
+}
+.details .btn:hover {
+  transform: scale(1.2,1.2);
+}
+
+// Keyframes da animação inicial do botão de comprar
+@keyframes pop {
+  0% {
+    transform: scale(0,0);
+  }
+  60% {
+    transform: scale(1.3,1.3);
+  }
+  100% {
+    transform: scale(1,1);
+  }
+}
+
+
+/*=======================================
+=            Minicart *BONUS*            =
+=======================================*/
+.mini-cart {
+  opacity: 0;
+  transform: translate(100%,0);
+  transition: all .6s;
+}
+.mini-cart.active {
+  opacity: 1;
+  transform: translate(0,0);
+}
+// Inicia botões posicionados 100% a direita fora da tela
+.mini-cart .btn {
+  transform: translate(100%,0);
+}
+
+// Anima botões de forma independete para reforçar o argumento e dar personalidade
+.active.mini-cart .btn-back {
+  animation: slideleft .6s .2s forwards; //"forwards" faz a animação parar no final do último keyframe
+}
+.active.mini-cart .btn-finish {
+  animation: slideleft .6s .3s forwards; //"forwards" faz a animação parar no final do último keyframe
+}
+
+// Keyframes da animação inicial do minicart quando clicamos no botão comprar
+@keyframes slideleft {
+  0% {
+    transform: translate(100%,0);
+  }
+  100% {
+    transform: translate(0,0);
+  }
+}
+
+// Ideia: animar a foto do produto voando para o mini cart :)
+
