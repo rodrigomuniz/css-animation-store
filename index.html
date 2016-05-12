@@ -1,6 +1,7 @@
 <html>
 <head>
 	<title>CSS Animation - VTEX Day 2015</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="bootstrap.min.css">
 <link rel="stylesheet" href="main.css">
 
@@ -12,7 +13,7 @@
 	<section class="container">
 		<h1 class="pull-left">Loja VTEX</h1>
 		<a href="#cart" class="open-cart pull-right">
-			Meu carrinho <i class="fa fa-shopping-cart"></i> 
+			Meu carrinho <i class="fa fa-shopping-cart"></i>
 		</a>
 	</section>
 </header>
@@ -20,7 +21,7 @@
 <div class="container">
 
 	<section class="row">
-		<nav class="col-md-2">
+		<nav class="col-md-2 hidden-xs">
 			<h3>Masculino</h3>
 			<ul>
 				<li>
@@ -68,15 +69,15 @@
 			<div class="col-md-5">
 				<div class="img-ph"></div>
 			</div>
-			<div class="col-md-7">			
+			<div class="col-md-7">
 				<h2>
 					Max Fillet Ao Molho Adultos
 				</h2>
 				<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
 
-				<!-- BOTÃO COMPRAR COM ANIMATION E TRANSITION. 
-				TAMBÉM TROCA UMA CLASSE NA DIV mini-cart AO SER CLICADO --> 
-				<a href="#cart" class="btn btn-success btn-lg open-cart" id="buy"><i class="fa fa-cart-plus"></i> Comprar</a>
+				<!-- BOTÃO COMPRAR COM ANIMATION E TRANSITION.
+				TAMBÉM TROCA UMA CLASSE NA DIV mini-cart AO SER CLICADO -->
+				<a href="#cart" class="btn btn-success btn-lg btn-block open-cart" id="buy"><i class="fa fa-cart-plus"></i> Comprar</a>
 			</div>
 		</div>
 	</section>
@@ -86,10 +87,10 @@
 	<div class="mini-cart" id="cart">
 		<h3>Carrinho</h3>
 		<div class="row mini-cart-list">
-			<div class="col-md-4">
+			<div class="col-md-4 col-xs-4">
 				<div class="img-ph"></div>
 			</div>
-			<div class="col-md-8">Max Fillet Ao Molho Adultos<br>
+			<div class="col-md-8 col-xs-8">Max Fillet Ao Molho Adultos<br>
 				<small>Vivamus sagittis lacus</small>
 			</div>
 		</div>
